@@ -17,6 +17,8 @@ img = np.zeros((80,80,3), np.uint8)
 while(True):
     #read frame from video file
     ret, frame = cap.read()
+    if ret == False:
+        break
     ## GET COLOR FROM TRACKBAR
     h = cv2.getTrackbarPos('H','image')
     s = cv2.getTrackbarPos('S','image')
